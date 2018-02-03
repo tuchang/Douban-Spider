@@ -7,7 +7,7 @@
 
 * 使用[Requests](http://www.python-requests.org/en/master/)模拟HTTP请求/响应，[Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/)提取页面信息。
 * PIL库中的Image方法来获取验证码，且需要人工验证。
-* 依照知乎上*@笑虎*的方法[随机生成Cookie](https://zhuanlan.zhihu.com/p/24035574)
+* 依照知乎上@笑虎的方法[随机生成Cookie](https://zhuanlan.zhihu.com/p/24035574)
 * 用json文件存储数据。
 * 该爬虫参考了一些大佬的代码！
 
