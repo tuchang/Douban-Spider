@@ -1,7 +1,7 @@
 import requests
-from bs4 import BeautifulSoup
-from os import remove
-from PIL import Image
+#from bs4 import BeautifulSoup
+#from os import remove
+#from PIL import Image
 import pickle
 import json
 import random
