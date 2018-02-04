@@ -23,9 +23,14 @@ $ cd Douban-Spider
 $ pip install -r requirements.txt
 ```
 ## 使用说明
-* 先在代码中调用login函数生成名为cookie的pickle文件
-* 注释login函数后，再调用getMovies函数进行爬取
+* 先在代码中调用"login函数"生成名为cookie的pickle文件
+
+* 注释login函数后，添加全局代理
+``` shell
+export HTTPS_PROXY="http://60.182.238.242:35535"
+```
+* 再调用"getMovies_1函数"进行爬取
 ``` shell
 $ python3 DoubanSpider.py
 ```
-* 默认为爬取电视剧数据。若想爬取电影数据，需更改*"tags_url"*和*"detail_url"*中"type=tv"为"type=movie"
+如果调用login函数报错，请删除文件夹里的cookie再登入！
