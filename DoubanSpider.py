@@ -79,11 +79,10 @@ def login():
 	page_login_bf=BeautifulSoup(page_login.text,'html.parser')
 	# 如果登陆打印登录账号
 	name=page_login_bf.find_all('a',class_='bn-more')
-	print(name[0].text) 
-	# 将此时的cookie保存方便下次登陆
-	with open('cookie', 'wb') as f:
-		pickle.dump(Session.cookies,f)
-		"""
+	print(name[0].text)
+"""
+
+	
 def random_bid():
 	cookie_name = 'bid'
 	#随机bid
@@ -93,6 +92,9 @@ def random_bid():
 	c.set(cookie_name, cookie_value, path='/', domain='.douban.com',)
 	Session.cookies.update(c)
 	print(set(Session.cookies))
+		# 将此时的cookie保存方便下次登陆
+	with open('cookie', 'wb') as f:
+		pickle.dump(Session.cookies,f)
 """"
 
 def getMovies():
@@ -147,6 +149,6 @@ def getMovies_1():
 #random_bid()
 if __name__=='__main__':
 #	login()
-	getMovies_1()
-#	random_bid()
+#	getMovies_1()
+	random_bid()
 

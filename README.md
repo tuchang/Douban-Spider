@@ -24,9 +24,8 @@ $ cd Douban-Spider
 $ pip install -r requirements.txt
 ```
 ## 使用说明
-* 先在代码中调用"login函数"生成名为cookie的pickle文件
-
-* 注释login函数后，添加全局代理
+* 先调用random_bid()生成并写入cookie
+* random_bid()注释后，添加全局代理
 
 例：
 ``` shell
@@ -36,4 +35,4 @@ export HTTPS_PROXY="https://60.182.238.242:35535"
 ``` shell
 $ python3 DoubanSpider.py
 ```
-如果调用login函数报错，请删除文件夹里的cookie再登入！
+
