@@ -7,6 +7,8 @@ import json
 import random
 import string
 #import http.cookiejar as cookielib
+Session=requests.session()
+"""
 url = 'https://www.douban.com/'
 login_url='https://www.douban.com/login'
 data={
@@ -22,8 +24,9 @@ headers = {
 			'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
 			'Accept-Encoding':'gzip, deflate, br'
 			}
-Session=requests.session()
+
 # 读取是否保存有cookie
+
 try:
 	with open('cookie','rb') as f:
 		Session.cookies=pickle.load(f)
@@ -80,6 +83,7 @@ def login():
 	# 将此时的cookie保存方便下次登陆
 	with open('cookie', 'wb') as f:
 		pickle.dump(Session.cookies,f)
+		"""
 def random_bid():
 	cookie_name = 'bid'
 	#随机bid
@@ -89,7 +93,8 @@ def random_bid():
 	c.set(cookie_name, cookie_value, path='/', domain='.douban.com',)
 	Session.cookies.update(c)
 	print(set(Session.cookies))
-"""
+""""
+
 def getMovies():
 	#获取标签
 	tags = []
