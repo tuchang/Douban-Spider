@@ -8,6 +8,8 @@ import random
 import string
 #import http.cookiejar as cookielib
 Session=requests.session()
+with open('cookie','rb') as f:
+	Session.cookies=pickle.load(f)
 """
 url = 'https://www.douban.com/'
 login_url='https://www.douban.com/login'
